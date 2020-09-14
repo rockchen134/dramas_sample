@@ -19,7 +19,6 @@ class DramasListViewController: UIViewController {
     private var refreshControl: UIRefreshControl!
     
     fileprivate let viewModel = DramasListViewModel()
-    fileprivate var observation: NSKeyValueObservation?
     
     deinit {
         debugPrint(self)
