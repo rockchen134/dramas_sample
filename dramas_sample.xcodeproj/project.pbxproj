@@ -8,11 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		1F10E0347E4CA2E43048C011 /* Pods_dramas_sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD38CC45AA349021849A2F10 /* Pods_dramas_sample.framework */; };
+		9A3ED1F1250FC3040095C919 /* APITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3ED1F0250FC3040095C919 /* APITest.swift */; };
+		9A3ED1FA250FC8ED0095C919 /* DramasListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3ED1F9250FC8ED0095C919 /* DramasListViewModelTest.swift */; };
 		9A7D2D7B250B3A170046CAF9 /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7D2D7A250B3A170046CAF9 /* DateUtil.swift */; };
 		9A7D2D7F250B52F80046CAF9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A7D2D7E250B52F80046CAF9 /* Localizable.strings */; };
 		9A7D2D8C250B739C0046CAF9 /* RatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A7D2D8A250B739C0046CAF9 /* RatingView.xib */; };
 		9A7D2D8D250B739C0046CAF9 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7D2D8B250B739C0046CAF9 /* RatingView.swift */; };
 		9A7D2D90250B84EE0046CAF9 /* Double+Decimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7D2D8F250B84EE0046CAF9 /* Double+Decimal.swift */; };
+		9A8E940825107D4E0058EE32 /* dramas-sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A8E940725107D4E0058EE32 /* dramas-sample.json */; };
+		9A8E940C25109FCB0058EE32 /* DramasDetailViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8E940B25109FCA0058EE32 /* DramasDetailViewModelTest.swift */; };
+		9A8E940E2510AE440058EE32 /* CoreDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8E940D2510AE440058EE32 /* CoreDataTest.swift */; };
 		9A8EEAE3250A80B200D8AF71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8EEAE2250A80B200D8AF71 /* AppDelegate.swift */; };
 		9A8EEAEA250A80B200D8AF71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A8EEAE8250A80B200D8AF71 /* Main.storyboard */; };
 		9A8EEAEC250A80B300D8AF71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A8EEAEB250A80B300D8AF71 /* Assets.xcassets */; };
@@ -33,6 +38,7 @@
 		9AC75F49250F7E69009CF65D /* DramasDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC75F48250F7E69009CF65D /* DramasDetailViewModel.swift */; };
 		9AC75F4B250F7F77009CF65D /* ViewModelStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC75F4A250F7F77009CF65D /* ViewModelStatus.swift */; };
 		9AC75F4D250F8946009CF65D /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC75F4C250F8946009CF65D /* UIViewController+Alert.swift */; };
+		9AC8BCAB25111C14007C4C2C /* ProviderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC8BCAA25111C14007C4C2C /* ProviderFactory.swift */; };
 		9ADBD3AC250DDD870037B489 /* UINavigationBar+Transparent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADBD3AB250DDD870037B489 /* UINavigationBar+Transparent.swift */; };
 		9ADBD3AF250DE1770037B489 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADBD3AE250DE1770037B489 /* NavigationController.swift */; };
 		9ADBD3B1250DF0760037B489 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADBD3B0250DF0760037B489 /* Observable.swift */; };
@@ -66,11 +72,16 @@
 /* Begin PBXFileReference section */
 		28714E65AC51D67CB3DC2468 /* Pods-dramas_sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dramas_sample.debug.xcconfig"; path = "Target Support Files/Pods-dramas_sample/Pods-dramas_sample.debug.xcconfig"; sourceTree = "<group>"; };
 		44015CAA4E308A77665D71D8 /* Pods-dramas_sampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dramas_sampleTests.debug.xcconfig"; path = "Target Support Files/Pods-dramas_sampleTests/Pods-dramas_sampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9A3ED1F0250FC3040095C919 /* APITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITest.swift; sourceTree = "<group>"; };
+		9A3ED1F9250FC8ED0095C919 /* DramasListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramasListViewModelTest.swift; sourceTree = "<group>"; };
 		9A7D2D7A250B3A170046CAF9 /* DateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
 		9A7D2D7E250B52F80046CAF9 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		9A7D2D8A250B739C0046CAF9 /* RatingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RatingView.xib; sourceTree = "<group>"; };
 		9A7D2D8B250B739C0046CAF9 /* RatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		9A7D2D8F250B84EE0046CAF9 /* Double+Decimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Decimal.swift"; sourceTree = "<group>"; };
+		9A8E940725107D4E0058EE32 /* dramas-sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "dramas-sample.json"; sourceTree = "<group>"; };
+		9A8E940B25109FCA0058EE32 /* DramasDetailViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramasDetailViewModelTest.swift; sourceTree = "<group>"; };
+		9A8E940D2510AE440058EE32 /* CoreDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTest.swift; sourceTree = "<group>"; };
 		9A8EEADF250A80B200D8AF71 /* dramas_sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dramas_sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8EEAE2250A80B200D8AF71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A8EEAE9250A80B200D8AF71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -97,6 +108,7 @@
 		9AC75F48250F7E69009CF65D /* DramasDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramasDetailViewModel.swift; sourceTree = "<group>"; };
 		9AC75F4A250F7F77009CF65D /* ViewModelStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelStatus.swift; sourceTree = "<group>"; };
 		9AC75F4C250F8946009CF65D /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		9AC8BCAA25111C14007C4C2C /* ProviderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderFactory.swift; sourceTree = "<group>"; };
 		9ADBD3AB250DDD870037B489 /* UINavigationBar+Transparent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Transparent.swift"; sourceTree = "<group>"; };
 		9ADBD3AE250DE1770037B489 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		9ADBD3B0250DF0760037B489 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
@@ -244,6 +256,7 @@
 				9A8EEAED250A80B300D8AF71 /* LaunchScreen.storyboard */,
 				9A8EEAF0250A80B300D8AF71 /* Info.plist */,
 				9ABB93CB250CA2CF00BB085B /* dramas_sample.xcdatamodeld */,
+				9A8E940725107D4E0058EE32 /* dramas-sample.json */,
 				9A7D2D7E250B52F80046CAF9 /* Localizable.strings */,
 			);
 			path = dramas_sample;
@@ -253,6 +266,10 @@
 			isa = PBXGroup;
 			children = (
 				9A8EEAF9250A80B300D8AF71 /* dramas_sampleTests.swift */,
+				9A3ED1F0250FC3040095C919 /* APITest.swift */,
+				9A3ED1F9250FC8ED0095C919 /* DramasListViewModelTest.swift */,
+				9A8E940B25109FCA0058EE32 /* DramasDetailViewModelTest.swift */,
+				9A8E940D2510AE440058EE32 /* CoreDataTest.swift */,
 				9A8EEAFB250A80B300D8AF71 /* Info.plist */,
 			);
 			path = dramas_sampleTests;
@@ -349,6 +366,7 @@
 			children = (
 				9ABB93CF250CA35700BB085B /* CoreDataHelper.swift */,
 				9ADBD3B0250DF0760037B489 /* Observable.swift */,
+				9AC8BCAA25111C14007C4C2C /* ProviderFactory.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -528,6 +546,7 @@
 				9A7D2D8C250B739C0046CAF9 /* RatingView.xib in Resources */,
 				9A7D2D7F250B52F80046CAF9 /* Localizable.strings in Resources */,
 				9A8EEAEC250A80B300D8AF71 /* Assets.xcassets in Resources */,
+				9A8E940825107D4E0058EE32 /* dramas-sample.json in Resources */,
 				9A8EEAEA250A80B200D8AF71 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -675,6 +694,7 @@
 				9ABB93CD250CA2CF00BB085B /* dramas_sample.xcdatamodeld in Sources */,
 				9A8F64FE250A96CB00C59E11 /* DramasListViewController.swift in Sources */,
 				9A7D2D90250B84EE0046CAF9 /* Double+Decimal.swift in Sources */,
+				9AC8BCAB25111C14007C4C2C /* ProviderFactory.swift in Sources */,
 				9ADBD3B9250DF17F0037B489 /* DramasListViewModel.swift in Sources */,
 				9A7D2D7B250B3A170046CAF9 /* DateUtil.swift in Sources */,
 				9A8F64FC250A957300C59E11 /* DramasResponse.swift in Sources */,
@@ -689,7 +709,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A8E940E2510AE440058EE32 /* CoreDataTest.swift in Sources */,
+				9A3ED1F1250FC3040095C919 /* APITest.swift in Sources */,
+				9A8E940C25109FCB0058EE32 /* DramasDetailViewModelTest.swift in Sources */,
 				9A8EEAFA250A80B300D8AF71 /* dramas_sampleTests.swift in Sources */,
+				9A3ED1FA250FC8ED0095C919 /* DramasListViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -855,18 +879,18 @@
 			baseConfigurationReference = 28714E65AC51D67CB3DC2468 /* Pods-dramas_sample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = F3WK945V42;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = dramas_sample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.connexionone.XONE;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rock.dramas-sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = XONE_Dev;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -877,18 +901,18 @@
 			baseConfigurationReference = FE11FFD217B0B154CBB97A7D /* Pods-dramas_sample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = F3WK945V42;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = dramas_sample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.connexionone.XONE;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rock.dramas-sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = XONE_Dev;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

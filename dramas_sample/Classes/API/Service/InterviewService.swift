@@ -9,9 +9,10 @@
 import Foundation
 import Moya
 
-let interviewProvider = MoyaProvider<InterviewService>(plugins: [NetworkLoggerPlugin()])
+let interviewProvider: MoyaProvider<InterviewService> = ProviderFactory.create()
 
 enum InterviewService {
+    /// 取得戲戲列表
     case dramas
 }
 
@@ -35,7 +36,13 @@ extension InterviewService: TargetType {
     }
     
     var sampleData: Data {
-        return "".data(using: .utf8)!
+        switch self {
+        case .dramas:
+            guard let path = Bundle.main.path(forResource: "dramas-sample", ofType: "json"), let data = try? String(contentsOfFile: path).data(using: .utf8) else {
+                return "".data(using: .utf8)!
+            }
+            return data
+        }
     }
     
     var task: Task {

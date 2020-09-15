@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// 戲劇資訊的Cell
 class DramasDetailCell: UITableViewCell {
 
     @IBOutlet weak var thumbImageView: UIImageView!

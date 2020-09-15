@@ -9,6 +9,7 @@
 import UIKit
 import LCNibBridge
 
+/// 評分元件
 class RatingView: UIView, LCNibBridge {
 
     @IBOutlet weak var ratingImageView: UIImageView!

@@ -9,10 +9,12 @@
 import UIKit
 
 extension UINavigationBar {
+    /// 設定 Navigation Bar 為透明
     func transparent() {
         setBackgroundImage(UIImage(), for: .default)
     }
     
+    /// 設定 Navigation Bar 為不透明
     func untransparent() {
         setBackgroundImage(nil, for: .default)
     }

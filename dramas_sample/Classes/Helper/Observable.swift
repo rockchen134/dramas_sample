@@ -7,11 +7,14 @@
 //
 
 import Foundation
-
+/// 輕量的觀察者模式
 class Observable<T> {
     typealias Observer = (T) -> ()
-    var observer: Observer?
     
+    // 用於數據改變的執行
+    private var observer: Observer?
+    
+    // 數據發生變更，則通過觀察者告知
     var value: T {
         didSet {
             observer?(value)

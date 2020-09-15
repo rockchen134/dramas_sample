@@ -9,7 +9,8 @@
 import UIKit
 
 extension UIViewController {
-    func Alert(_ title: String, message: String, comfirm: @escaping() -> Void) {
+    /// 只有「確認」按鈕的視窗
+    func alert(_ title: String, message: String, comfirm: @escaping() -> Void) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let confirmAction = UIAlertAction(title: NSLocalizedString("confirm", comment: ""), style: .default) { (_) in
             comfirm()

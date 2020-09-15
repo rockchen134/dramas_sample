@@ -9,9 +9,17 @@
 import Foundation
 import CoreData
 
+/// Core Data stack
 final class CoreDataHelper: NSObject {
+    /// Get global instance
     static let shared = CoreDataHelper()
     
+    /**
+     The persistent container for the application. This implementation
+     creates and returns a container, having loaded the store for the
+     application to it. This property is optional since there are legitimate
+     error conditions that could cause the creation of the store to fail.
+     */
     lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "dramas_sample")
         
@@ -23,6 +31,9 @@ final class CoreDataHelper: NSObject {
         return container
     }()
     
+    /**
+     Save the entity in the main context.
+    */
     func saveContext() {
         let context = persistentContainer.viewContext
         

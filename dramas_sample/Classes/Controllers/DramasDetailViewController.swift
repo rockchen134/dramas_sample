@@ -9,6 +9,7 @@
 import UIKit
 import Kingfisher
 
+/// 戲劇資訊
 class DramasDetailViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
@@ -49,6 +50,7 @@ class DramasDetailViewController: UIViewController {
 }
 
 extension DramasDetailViewController {
+    // 初始化參數或是UI
     private func setup() {
         retryButton.layer.cornerRadius = 15.0
         retryButton.isHidden = true
@@ -56,29 +58,14 @@ extension DramasDetailViewController {
     }
     
     private func dataBind() {
-        viewModel.status.observer { [unowned self] (status) in
-            switch status {
-            case .none:
-                debugPrint("none")
-            case .start:
-                self.retryButton.isHidden = true
-            case .completed:
-                self.retryButton.isHidden = true
-                self.tableView.reloadData()
-            case .offline:
-                self.retryButton.isHidden = false
-            case .error(let error):
-                debugPrint(error)
-                self.Alert("Oops!", message: error.localizedDescription) {
-                    
-                }
-                self.retryButton.isHidden = false
-            }
+        viewModel.offline.observer { [unowned self] (offline) in
+            self.retryButton.isHidden = !offline
         }
         viewModel.load()
     }
 }
 
+// MARK: - UITableViewDataSource
 extension DramasDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.dataSource.count
@@ -99,6 +86,7 @@ extension DramasDetailViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension DramasDetailViewController: UITableViewDelegate {
     
 }

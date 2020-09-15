@@ -9,6 +9,7 @@
 import UIKit
 import LCNibBridge
 
+/// 提供搜尋的行為對象
 protocol SearchViewDelegate {
     func searchView(_ searchView: SearchView, didChanged text: String)
     func searchViewDicCancel()
@@ -32,13 +33,14 @@ class SearchView: UIView, LCNibBridge {
         roundView.layer.cornerRadius = 20.0
     }
 
-    
+    /// 取消按鈕事件
     @IBAction func cancelButtonAction(_ sender: Any) {
         textField.text = ""
         textField.resignFirstResponder()
         delegate?.searchViewDicCancel()
     }
     
+    /// 輸入文字事件
     @IBAction func searchTextDidChanged(_ sender: UITextField) {
         if sender.markedTextRange == nil, let text = sender.text {
             delegate?.searchView(self, didChanged: text)
