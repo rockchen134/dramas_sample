@@ -4,7 +4,7 @@ platform :ios, '10.0'
 def networking_pod
   pod 'ReachabilitySwift', '~> 5.0.0'
   pod 'Alamofire', '~> 5.2.2'
-  pod 'Moya', '~> 14.0.0-'
+  pod 'Moya', '~> 14.0.0'
 end
 
 def image_pod
