@@ -13,7 +13,6 @@ end
 
 def ui_pod
    pod 'LCNibBridge', '~> 1.3.3'
-   pod 'MBProgressHUD'
 end
 
 target 'dramas_sample' do

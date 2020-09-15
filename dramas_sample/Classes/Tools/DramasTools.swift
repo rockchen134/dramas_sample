@@ -9,7 +9,10 @@
 import Foundation
 import CoreData
 
+// 提供戲劇Entity的新增、刪除、修改
 class DramasTools {
+    
+    /// 新增
     func insert(_ dramas: [DramasData]) {
         let helper = CoreDataHelper.shared
         let context = helper.persistentContainer.viewContext
@@ -27,7 +30,8 @@ class DramasTools {
         
         helper.saveContext()
     }
-        
+    
+    /// 取得資料
     func fetch(_ name: String? = nil) -> [Dramas] {
         let helper = CoreDataHelper.shared
         let context = helper.persistentContainer.viewContext
@@ -47,6 +51,7 @@ class DramasTools {
         }
     }
     
+    /// 刪除所有資料
     func deleteAll() {
         let helper = CoreDataHelper.shared
         let context = helper.persistentContainer.viewContext

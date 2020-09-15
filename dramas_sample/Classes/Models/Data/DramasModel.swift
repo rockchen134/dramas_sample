@@ -8,12 +8,21 @@
 
 import Foundation
 
+// 戲劇資料格式
 struct DramasModel {
     let thumb: URL
     let name: String
     let createAt: String
     let rating: String
     let totalViews: String
+    
+    init(thumb: URL, name: String, createAt: String, rating: String, totalViews: String) {
+        self.name = name
+        self.rating = rating
+        self.totalViews = totalViews
+        self.createAt = createAt
+        self.thumb = thumb
+    }
     
     init(_ data: DramasData) {
         self.name = data.name

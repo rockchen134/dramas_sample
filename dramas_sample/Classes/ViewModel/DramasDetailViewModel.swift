@@ -9,12 +9,13 @@
 import Foundation
 import Reachability
 
+/// 戲劇資訊 View Model
 final class DramasDetailViewModel {
     
-    let status: Observable<ViewModelStatus> = Observable(.none)
-    var dataSource: [DramasModel] = []
+    var offline: Observable<Bool> = Observable(false) // 網路狀態
+    var dataSource: [DramasModel] = [] // 戲劇資訊資料
     
-    fileprivate var reachability: Reachability!
+    fileprivate var reachability: Reachability! // 網路監聽元件
     
     deinit {
         reachability.stopNotifier()
@@ -27,16 +28,16 @@ final class DramasDetailViewModel {
     }
     
     func load() {
-        status.value = .start
         if reachability.connection == .unavailable {
-            status.value = .offline
+            offline.value = true
         } else {
-            status.value = .completed
+            offline.value = false
         }
     }
 }
 
 extension DramasDetailViewModel {
+    // 開啟監取網路狀態
     fileprivate func startReachability() {
         do {
             reachability = try Reachability()

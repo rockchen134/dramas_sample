@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// API URL
 #if DEBUG
 struct API {
     static let url = "https://static.linetv.tw"

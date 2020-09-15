@@ -8,10 +8,10 @@
 
 import Foundation
 
+/// View Model 取得資料的狀態
 enum ViewModelStatus {
     case none
-    case start
-    case completed
-    case offline
-    case error(error: Error)
+    case start // 開始取得資料
+    case completed // 取得資料結束
+    case error(error: Error) // 發生錯誤
 }
