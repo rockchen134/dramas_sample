@@ -8,7 +8,7 @@
 
 import Foundation
 
-// 戲劇資料格式
+/// 戲劇的資料格式
 struct DramasModel {
     let thumb: URL
     let name: String

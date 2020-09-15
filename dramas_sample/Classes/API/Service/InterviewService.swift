@@ -12,7 +12,7 @@ import Moya
 let interviewProvider: MoyaProvider<InterviewService> = ProviderFactory.create()
 
 enum InterviewService {
-    /// 取得戲戲列表
+    /// 取得戲劇列表
     case dramas
 }
 

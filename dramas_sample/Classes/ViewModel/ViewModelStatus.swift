@@ -8,7 +8,7 @@
 
 import Foundation
 
-/// View Model 取得資料的狀態
+/// 提供 View Controller 在載入資料時 UI 的程現狀態
 enum ViewModelStatus {
     case none
     case start // 開始取得資料
