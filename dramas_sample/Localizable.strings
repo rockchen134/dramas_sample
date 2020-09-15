@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  dramas_sample
+
+  Created by Rock Chen on 2020/9/11.
+  Copyright © 2020 Rock Chen. All rights reserved.
+*/
+
+"dramas_list_title" = "戲劇列表";
+"darams_list_search_placeholder" = "請輸入搜尋的戲劇名稱";
+"darams_detail_total_views" = "%@萬次觀看";
+"retry" = "重試";
+"confirm" = "確認";
