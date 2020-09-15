@@ -15,6 +15,7 @@ protocol SearchViewDelegate {
     func searchViewDicCancel()
 }
 
+/// 搜尋UI的共用元件
 class SearchView: UIView, LCNibBridge {
 
     @IBOutlet weak var textField: UITextField!
