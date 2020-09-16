@@ -48,12 +48,14 @@ final class DramasListViewModel {
             // 從 Core Data 取得上一次的 API資料
             dataSource = getOffineData()
             
-            search(searchValue)
+            if searchValue.count > 0 {
+                search(searchValue)
+            }
             
             status.value = .completed
             offline.value = true
         } else {
-            interviewProvider.request(.dramas) { [unowned self] (result) in
+            interviewProvider.request(.dramas) { (result) in
                 var err: Error?
                 var model: DramasResponse?
                 
@@ -105,7 +107,10 @@ final class DramasListViewModel {
                     }
                 }
                 
-                self.search(self.searchText)
+                if self.searchValue.count > 0 {
+                    self.search(self.searchValue)
+                }
+                
             }
         }
     }
