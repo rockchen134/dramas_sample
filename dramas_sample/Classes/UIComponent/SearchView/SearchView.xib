@@ -72,10 +72,11 @@
             <viewLayoutGuide key="safeArea" id="Clw-TU-7u0"/>
             <connections>
                 <outlet property="cancelButton" destination="Rdg-HD-GZR" id="okH-K4-9xQ"/>
+                <outlet property="cancelButtonTrailingConstraint" destination="cF7-3O-tBu" id="hrD-Oi-Y1T"/>
                 <outlet property="roundView" destination="sUQ-C1-LRh" id="d9I-Ps-VCw"/>
                 <outlet property="textField" destination="3Al-Xa-uAS" id="Rdr-jc-PAA"/>
             </connections>
-            <point key="canvasLocation" x="140" y="154"/>
+            <point key="canvasLocation" x="140" y="153.82308845577214"/>
         </view>
     </objects>
     <resources>

@@ -21,6 +21,7 @@ class SearchView: UIView, LCNibBridge {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var roundView: UIView!
     @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var cancelButtonTrailingConstraint: NSLayoutConstraint!
     
     weak var delegate: SearchViewDelegate?
     
@@ -32,6 +33,8 @@ class SearchView: UIView, LCNibBridge {
         super.awakeFromNib()
         
         roundView.layer.cornerRadius = 20.0
+        cancelButton.setTitle(NSLocalizedString("cancel", comment: ""), for: .normal)
+        isHiddenCancelButtonWidth(true, isAnimation: false)
     }
 
     /// 取消按鈕事件
@@ -49,7 +52,29 @@ class SearchView: UIView, LCNibBridge {
     }
 }
 
+extension SearchView {
+    /// 顯示或是隱藏取消按鈕
+    private func isHiddenCancelButtonWidth(_ isHidden: Bool, isAnimation: Bool = true) {
+        cancelButton.isHidden = isHidden
+        cancelButtonTrailingConstraint.constant = isHidden ? -52.0 : 0.0
+        
+        if isAnimation {
+            UIView.animate(withDuration: 0.25) {
+                self.layoutIfNeeded()
+            }
+        }
+    }
+}
+
 extension SearchView: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        isHiddenCancelButtonWidth(false)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        isHiddenCancelButtonWidth(true)
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         

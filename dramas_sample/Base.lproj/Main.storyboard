@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="FXz-5r-bH0" kind="relationship" relationship="rootViewController" id="2OA-zq-wC9"/>
+                        <segue destination="FXz-5r-bH0" kind="relationship" relationship="rootViewController" id="Sj5-0o-J3g"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zuD-qI-ywQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
