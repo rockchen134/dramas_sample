@@ -29,6 +29,7 @@
 		9A8F64FC250A957300C59E11 /* DramasResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F64FB250A957300C59E11 /* DramasResponse.swift */; };
 		9A8F64FE250A96CB00C59E11 /* DramasListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F64FD250A96CB00C59E11 /* DramasListViewController.swift */; };
 		9A8F6500250A96DF00C59E11 /* DramasDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F64FF250A96DF00C59E11 /* DramasDetailViewController.swift */; };
+		9A9A525F2511E5F70066BE70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A9A525E2511E5F70066BE70 /* InfoPlist.strings */; };
 		9ABB9389250C9EFA00BB085B /* DateFormatter+ISO860.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABB9388250C9EFA00BB085B /* DateFormatter+ISO860.swift */; };
 		9ABB93CD250CA2CF00BB085B /* dramas_sample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9ABB93CB250CA2CF00BB085B /* dramas_sample.xcdatamodeld */; };
 		9ABB93D0250CA35700BB085B /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABB93CF250CA35700BB085B /* CoreDataHelper.swift */; };
@@ -99,6 +100,7 @@
 		9A8F64FB250A957300C59E11 /* DramasResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramasResponse.swift; sourceTree = "<group>"; };
 		9A8F64FD250A96CB00C59E11 /* DramasListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramasListViewController.swift; sourceTree = "<group>"; };
 		9A8F64FF250A96DF00C59E11 /* DramasDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramasDetailViewController.swift; sourceTree = "<group>"; };
+		9A9A525E2511E5F70066BE70 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		9ABB9388250C9EFA00BB085B /* DateFormatter+ISO860.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+ISO860.swift"; sourceTree = "<group>"; };
 		9ABB93CC250CA2CF00BB085B /* dramas_sample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = dramas_sample.xcdatamodel; sourceTree = "<group>"; };
 		9ABB93CF250CA35700BB085B /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 				9A8EEAEB250A80B300D8AF71 /* Assets.xcassets */,
 				9A8EEAED250A80B300D8AF71 /* LaunchScreen.storyboard */,
 				9A8EEAF0250A80B300D8AF71 /* Info.plist */,
+				9A9A525E2511E5F70066BE70 /* InfoPlist.strings */,
 				9ABB93CB250CA2CF00BB085B /* dramas_sample.xcdatamodeld */,
 				9A8E940725107D4E0058EE32 /* dramas-sample.json */,
 				9A7D2D7E250B52F80046CAF9 /* Localizable.strings */,
@@ -542,6 +545,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A8EEAEF250A80B300D8AF71 /* LaunchScreen.storyboard in Resources */,
+				9A9A525F2511E5F70066BE70 /* InfoPlist.strings in Resources */,
 				9ADBD3CB250E31D20037B489 /* SearchView.xib in Resources */,
 				9A7D2D8C250B739C0046CAF9 /* RatingView.xib in Resources */,
 				9A7D2D7F250B52F80046CAF9 /* Localizable.strings in Resources */,

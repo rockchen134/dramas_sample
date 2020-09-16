@@ -67,6 +67,7 @@ extension DramasListViewController {
         refreshControl.addTarget(self, action: #selector(refreshAction(_:)), for: .valueChanged)
         tableView.refreshControl = refreshControl
         
+        searchView.textField.placeholder = NSLocalizedString("darams_list_search_placeholder", comment: "")
         searchView.delegate = self
     }
     
