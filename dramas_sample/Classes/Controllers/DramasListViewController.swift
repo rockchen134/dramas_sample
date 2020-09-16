@@ -17,7 +17,7 @@ class DramasListViewController: UIViewController {
     @IBOutlet weak var retryButton: UIButton!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
-    private var refreshControl: UIRefreshControl!
+    fileprivate var refreshControl: UIRefreshControl!
     
     fileprivate let viewModel = DramasListViewModel()
     
@@ -99,7 +99,7 @@ extension DramasListViewController {
         }
         
         // 監聽網路狀態
-        viewModel.offline.observer { (offline) in
+        viewModel.offline.observer { [unowned self] (offline) in
             self.retryButton.isHidden = !offline
         }
         

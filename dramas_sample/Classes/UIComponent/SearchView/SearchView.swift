@@ -10,7 +10,7 @@ import UIKit
 import LCNibBridge
 
 /// 提供搜尋的行為對象
-protocol SearchViewDelegate {
+protocol SearchViewDelegate: AnyObject {
     func searchView(_ searchView: SearchView, didChanged text: String)
     func searchViewDicCancel()
 }
@@ -22,7 +22,7 @@ class SearchView: UIView, LCNibBridge {
     @IBOutlet weak var roundView: UIView!
     @IBOutlet weak var cancelButton: UIButton!
     
-    var delegate: SearchViewDelegate?
+    weak var delegate: SearchViewDelegate?
     
     deinit {
         debugPrint(self)
@@ -53,6 +53,10 @@ extension SearchView: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         
+        return true
+    }
+    
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
         return true
     }
 }
