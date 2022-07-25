@@ -17,13 +17,13 @@ jobs:
       LC_ALL: en_US.UTF-8
       LANG: en_US.UTF-8
       FL_OUTPUT_DIR: output
-
-    working_directory: /Users/distiller/project
+  
+#     working_directory: /Users/distiller/project
     
     # Add steps to the job
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
-    steps:
-      - run: 
+#     steps:
+#       - run: 
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
