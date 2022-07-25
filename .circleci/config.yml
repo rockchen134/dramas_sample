@@ -11,12 +11,6 @@ jobs:
     # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
     macos:
-      xcode: 13.2.1 # Specify the Xcode version to use
-    
-    environment:
-      LC_ALL: en_US.UTF-8
-      LANG: en_US.UTF-8
-      FL_OUTPUT_DIR: output
   
 #     working_directory: /Users/distiller/project
     
