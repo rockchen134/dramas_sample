@@ -25,7 +25,7 @@ jobs:
           name: "Pre-start Simulator"
           command: echo $simName
           environment:
-            simName: (new Date()).format("yyyyMMddHHmmssSSS", TimeZone.getTimeZone('GMT+8')).toString()
+            simName: << (new Date()).format("yyyyMMddHHmmssSSS", TimeZone.getTimeZone('GMT+8')).toString()
       # - checkout
       #  - run: pod install # Install CocoaPods dependencies
       # - run: fastlane scan # Run tests using Fastlane
