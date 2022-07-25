@@ -13,6 +13,11 @@ jobs:
     macos:
       xcode: 13.2.1 # Specify the Xcode version to use
 
+    environment:
+      LC_ALL: en_US.UTF-8
+      LANG: en_US.UTF-8
+      FL_OUTPUT_DIR: output
+      
     # Add steps to the job
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
