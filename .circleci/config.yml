@@ -23,7 +23,7 @@ jobs:
     steps:
       - run:
           name: "Pre-start Simulator"
-          command: xcrun simctl list
+          command: echo simName
           environment:
             simName: (new Date()).format("yyyyMMddHHmmssSSS", TimeZone.getTimeZone('GMT+8')).toString()
       # - checkout
