@@ -29,11 +29,11 @@ jobs:
           command: xcrun simctl create ${simName} ${simDeviceType} ${simRuntime}
             
       - run: 
-          name: "ddd"
-          command: xcrun simctl boot ${simName} ${simDeviceType} ${simRuntime}
+          name: "pre-start simulator"
+          command: xcrun simctl boot ${simName}
           
       - run: 
-          name: "run sim"
+          name: "simulator list"
           command: xcrun simctl list
       # - checkout
       #  - run: pod install # Install CocoaPods dependencies
