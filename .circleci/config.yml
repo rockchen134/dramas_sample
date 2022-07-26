@@ -30,6 +30,9 @@ jobs:
             simRuntime: "com.apple.CoreSimulator.SimRuntime.iOS-15-2"
       - run: 
           name: "ddd"
+          command: xcrun simctl boot ${simName} ${simDeviceType} ${simRuntime}
+      - run: 
+          name: "run sim"
           command: xcrun simctl list
       # - checkout
       #  - run: pod install # Install CocoaPods dependencies
