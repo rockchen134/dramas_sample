@@ -47,6 +47,44 @@ jobs:
       - store_artifacts:
           path: test_output
           destination: scan-output
+  
+  deliver-to-testflight:
+    macos:
+      xcode: "13.2.1"
+
+    environment:
+      LC_ALL: en_US.UTF-8
+      LANG: en_US.UTF-8
+
+    working_directory: /Users/distiller/project
+
+    shell: /bin/bash --login -o pipefail
+
+    # Define the steps required to build the project.
+    steps:
+
+      # Cannot use cache due to this issue: https://discuss.circleci.com/t/builds-using-git-tags-failing/14904/6
+
+      # Get the code from the VCS provider.      
+      - run:
+          name: Git checkout
+          command: git clone --depth 1 --single-branch ${CIRCLE_REPOSITORY_URL} -b ${CIRCLE_TAG} .
+      
+      # Configure Bundler
+      - run:
+          name: Configure Bundler
+          command: tail -1 Gemfile.lock | awk '{print $1}' | xargs gem install --user-install bundler -v
+
+      # Install Bundler
+      - run:
+          name: Install Bundler
+          command: bundle install --path $HOME/.bundle
+
+      # Deploy!
+      - run:
+          name: Deploy to iTC
+          command: bundle exec fastlane deliver_to_testflight
+          no_output_timeout: 20m
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
