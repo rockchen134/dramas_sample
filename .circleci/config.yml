@@ -17,7 +17,7 @@ jobs:
       LC_ALL: en_US.UTF-8
       LANG: en_US.UTF-8
       FL_OUTPUT_DIR: output
-      simName: "3345678"
+      simName: "`r format(Sys.time(), '%d %B, %Y')`" 
       simDeviceType: "com.apple.CoreSimulator.SimDeviceType.iPhone-11-Pro"
       simRuntime: "com.apple.CoreSimulator.SimRuntime.iOS-15-2"
       
