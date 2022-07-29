@@ -12,30 +12,23 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
     macos:
       xcode: 13.2.1 # Specify the Xcode version to use
-
+    
     environment:
       LC_ALL: en_US.UTF-8
       LANG: en_US.UTF-8
       FL_OUTPUT_DIR: output
-      simName: "Sys.Date()"
-      simDeviceType: "com.apple.CoreSimulator.SimDeviceType.iPhone-11-Pro"
-      simRuntime: "com.apple.CoreSimulator.SimRuntime.iOS-15-2"
-
-    working_directory: /Users/distiller/project
-
-    shell: /bin/bash --login -o pipefail
 
     # Add steps to the job
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
-      - run:
-          name: "create simulator"
-          command: xcrun simctl create ${simName} ${simDeviceType} ${simRuntime}
-            
-      - run:
-          name: Git checkout
-          command: git clone --depth 1 --single-branch ${CIRCLE_REPOSITORY_URL} -b ${CIRCLE_BRANCH} .
-          
+      - checkout
+       # Preboot iOS Simulator
+      - macos/preboot-simulator: 
+          device: iPhone 12
+          version: "15.2"
+      - run: pod install # Install CocoaPods dependencies
+      - run: fastlane scan # Run tests using Fastlane
+
       # - checkout
       #  - run: pod install # Install CocoaPods dependencies
       # - run: fastlane scan # Run tests using Fastlane
