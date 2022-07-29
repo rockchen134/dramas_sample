@@ -29,6 +29,9 @@ jobs:
       - macos/preboot-simulator: 
           device: iPhone 12
           version: "15.2"
+      - run: 
+          name: Simulator
+          command: xcrun simctl list
       - run: pod install # Install CocoaPods dependencies
       - run: fastlane scan # Run tests using Fastlane
 
