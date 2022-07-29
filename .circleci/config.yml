@@ -4,6 +4,9 @@
 # https://circleci.com/docs/2.0/testing-ios/
 version: 2.1
 
+orbs:
+  macos: circleci/macos@2.2.0
+
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs:
@@ -22,7 +25,7 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       - checkout
-       # Preboot iOS Simulator
+      # Preboot iOS Simulator
       - macos/preboot-simulator: 
           device: iPhone 12
           version: "15.2"
