@@ -26,11 +26,11 @@ jobs:
     steps:
       - checkout
       # Preboot iOS Simulator
-      - macos/preboot-simulator: 
+      - macos/preboot-simulator:
           device: iPhone 12
           version: "15.2"
           platform: iOS
-          device_id_var: 'IPHONE_UUID' 
+          device-udid-var: "IPHONE_UUID"
       - run: 
           name: Simulator
           command: xcrun simctl list
