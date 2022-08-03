@@ -38,7 +38,7 @@ jobs:
       # - run: fastlane scan # Run tests using Fastlane
       - run:
           name: test
-          command: echo branch:${CIRCLE_BRANCH} build_url:${CIRCLE_BUILD_URL} 
+          command: echo branch:${CIRCLE_BRANCH} build_url:${CIRCLE_BUILD_URL} w:${CIRCLE_WORKING_DIRECTORY}
       # - checkout
       #  - run: pod install # Install CocoaPods dependencies
       # - run: fastlane scan # Run tests using Fastlane
