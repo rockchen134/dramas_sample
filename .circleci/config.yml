@@ -71,7 +71,7 @@ jobs:
       # Get the code from the VCS provider.      
       - run:
           name: Git checkout
-          command: git clone --depth 1 --single-branch ${CIRCLE_REPOSITORY_URL} -b ${CIRCLE_TAG} .
+          command: git clone --depth 1 --single-branch ${CIRCLE_REPOSITORY_URL} build_url:${CIRCLE_BUILD_URL} .
       
       # Configure Bundler
       - run:
