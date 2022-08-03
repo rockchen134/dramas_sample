@@ -38,7 +38,7 @@ jobs:
       # - run: fastlane scan # Run tests using Fastlane
       - run:
           name: test
-          command: echo branch:${CIRCLE_BRANCH} build_url:${CIRCLE_REPOSITORY_URL} -b ${CIRCLE_TAG} 
+          command: echo branch:${CIRCLE_BRANCH} build_url:${CIRCLE_REPOSITORY_URL} build_url:${CIRCLE_BUILD_URL} 
       # - checkout
       #  - run: pod install # Install CocoaPods dependencies
       # - run: fastlane scan # Run tests using Fastlane
@@ -71,7 +71,7 @@ jobs:
       # Get the code from the VCS provider.      
       - run:
           name: Git checkout
-          command: git clone --depth 1 --single-branch ${CIRCLE_REPOSITORY_URL} build_url:${CIRCLE_BUILD_URL} .
+          command: git clone --depth 1 --single-branch ${CIRCLE_REPOSITORY_URL} -b ${CIRCLE_TAG} .
       
       # Configure Bundler
       - run:
