@@ -99,4 +99,4 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - << pipeline.parameters.git-branch >>
